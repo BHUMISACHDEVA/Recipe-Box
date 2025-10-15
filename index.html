@@ -105,5 +105,48 @@
         </div>
     </div>
     
+    <div id="recipeModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Add Recipe</h2>
+                <button class="btn-close" id="closeModal">&times;</button>
+            </div>
+            <form id="recipeForm">
+                <div class="form-group">
+                    <label>Recipe Title</label>
+                    <input type="text" id="recipeTitle" required placeholder="Delicious Pasta">
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="recipeCategory" required>
+                        <option value="">Select Category</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Snacks">Snacks</option>
+                        <option value="Beverages">Beverages</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Image URL</label>
+                    <input type="url" id="recipeImage" required placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="form-group">
+                    <label>Ingredients</label>
+                    <div id="ingredientsContainer"></div>
+                    <button type="button" class="btn-add-ingredient" id="addIngredient">+ Add Ingredient</button>
+                </div>
+                <div class="form-group">
+                    <label>Cooking Steps</label>
+                    <div id="stepsContainer"></div>
+                    <button type="button" class="btn-add-step" id="addStep">+ Add Step</button>
+                </div>
+                <button type="submit" class="btn" id="saveRecipeBtn">Save Recipe</button>
+            </form>
+        </div>
+    </div>
+<script src="script.js"></script>
+
 </body>
 </html>
