@@ -8,6 +8,7 @@
     
 </head>
 <body>
+
     <div id="loginPage" class="auth-container">
         <div class="auth-box">
             <div class="auth-header">
@@ -30,6 +31,33 @@
             </div>
         </div>
     </div>
-    
+
+    <div id="signupPage" class="auth-container hidden">
+        <div class="auth-box">
+            <div class="auth-header">
+                <h1>🍳 Recipe Box</h1>
+                <p>Create your account and start cooking!</p>
+            </div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="signupName" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="signupEmail" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" id="signupPassword" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+            <div class="auth-footer">
+                Already have an account? <a href="#" id="goToLogin">Login</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
