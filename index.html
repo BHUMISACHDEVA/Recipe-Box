@@ -59,5 +59,51 @@
         </div>
     </div>
 
+   <div id="mainApp" class="hidden">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="nav-brand">🍳 Recipe Box</div>
+                <div class="nav-actions">
+                    <span class="nav-user" id="userName"></span>
+                    <button class="btn-secondary" id="addRecipeBtn">+ Add Recipe</button>
+                    <button class="btn-logout" id="logoutBtn">Logout</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Home Page -->
+        <div id="homePage">
+            <div class="container">
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="🔍 Search recipes...">
+                </div>
+
+                <!-- Categories -->
+                <div class="categories" id="categoriesContainer"></div>
+
+                <!-- Recipe Grid -->
+                <div class="recipe-grid" id="recipeGrid"></div>
+            </div>
+        </div>
+
+        <!-- Recipe Detail Page -->
+        <div id="detailPage" class="hidden">
+            <div class="container">
+                <button class="btn-secondary" id="backToHome">← Back to Recipes</button>
+                <div class="recipe-detail" id="recipeDetailContent"></div>
+            </div>
+        </div>
+                <!-- Cooking Mode Page -->
+        <div id="cookingPage" class="hidden">
+            <div class="container cooking-mode">
+                <button class="btn-secondary" id="exitCookingMode" style="margin-bottom: 20px;">← Exit Cooking Mode</button>
+                <div class="cooking-step" id="cookingStepContent"></div>
+                <div class="cooking-controls" id="cookingControls"></div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
