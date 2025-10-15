@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Box - Your Digital Kitchen</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 <body>
-
+    <!-- Login Page -->
     <div id="loginPage" class="auth-container">
         <div class="auth-box">
             <div class="auth-header">
@@ -32,6 +31,7 @@
         </div>
     </div>
 
+    <!-- Signup Page -->
     <div id="signupPage" class="auth-container hidden">
         <div class="auth-box">
             <div class="auth-header">
@@ -59,7 +59,8 @@
         </div>
     </div>
 
-   <div id="mainApp" class="hidden">
+    <!-- Main App -->
+    <div id="mainApp" class="hidden">
         <!-- Navbar -->
         <nav class="navbar">
             <div class="nav-content">
@@ -95,7 +96,8 @@
                 <div class="recipe-detail" id="recipeDetailContent"></div>
             </div>
         </div>
-                <!-- Cooking Mode Page -->
+
+        <!-- Cooking Mode Page -->
         <div id="cookingPage" class="hidden">
             <div class="container cooking-mode">
                 <button class="btn-secondary" id="exitCookingMode" style="margin-bottom: 20px;">← Exit Cooking Mode</button>
@@ -104,7 +106,8 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- Add/Edit Recipe Modal -->
     <div id="recipeModal" class="modal hidden">
         <div class="modal-content">
             <div class="modal-header">
@@ -147,6 +150,5 @@
         </div>
     </div>
 <script src="script.js"></script>
-
 </body>
 </html>
