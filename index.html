@@ -18,10 +18,12 @@
                 <div class="form-group">
                     <label>Email</label>
                     <input type="email" id="loginEmail" required placeholder="your@email.com">
+                    <div class="error-message" id="loginEmailError"></div>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
                     <input type="password" id="loginPassword" required placeholder="••••••••">
+                    <div class="error-message" id="loginPasswordError"></div>
                 </div>
                 <button type="submit" class="btn">Login</button>
             </form>
@@ -41,15 +43,43 @@
             <form id="signupForm">
                 <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" id="signupName" required placeholder="John Doe">
+                    <input type="text" id="signupName" required placeholder="John Doe" minlength="3">
+                    <div class="error-message" id="signupNameError"></div>
                 </div>
                 <div class="form-group">
                     <label>Email</label>
                     <input type="email" id="signupEmail" required placeholder="your@email.com">
+                    <div class="error-message" id="signupEmailError"></div>
                 </div>
                 <div class="form-group">
                     <label>Password</label>
-                    <input type="password" id="signupPassword" required placeholder="••••••••">
+                    <input type="password" id="signupPassword" required placeholder="••••••••" minlength="8">
+                    <div class="password-strength">
+                        <div class="password-strength-bar" id="passwordStrengthBar"></div>
+                    </div>
+                    <div class="password-requirements">
+                        <div class="requirement" id="req-length">
+                            <span>○</span> At least 8 characters
+                        </div>
+                        <div class="requirement" id="req-uppercase">
+                            <span>○</span> One uppercase letter
+                        </div>
+                        <div class="requirement" id="req-lowercase">
+                            <span>○</span> One lowercase letter
+                        </div>
+                        <div class="requirement" id="req-number">
+                            <span>○</span> One number
+                        </div>
+                        <div class="requirement" id="req-special">
+                            <span>○</span> One special character (@$!%*?&)
+                        </div>
+                    </div>
+                    <div class="error-message" id="signupPasswordError"></div>
+                </div>
+                <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" id="signupConfirmPassword" required placeholder="••••••••">
+                    <div class="error-message" id="signupConfirmPasswordError"></div>
                 </div>
                 <button type="submit" class="btn">Sign Up</button>
             </form>
@@ -136,6 +166,18 @@
                     <input type="url" id="recipeImage" required placeholder="https://example.com/image.jpg">
                 </div>
                 <div class="form-group">
+                    <label>Calories (per serving)</label>
+                    <input type="number" id="recipeCalories" required placeholder="250" min="0">
+                </div>
+                <div class="form-group">
+                    <label>Energy (kJ per serving)</label>
+                    <input type="number" id="recipeEnergy" required placeholder="1050" min="0">
+                </div>
+                <div class="form-group">
+                    <label>Servings</label>
+                    <input type="number" id="recipeServings" required placeholder="4" min="1">
+                </div>
+                <div class="form-group">
                     <label>Ingredients</label>
                     <div id="ingredientsContainer"></div>
                     <button type="button" class="btn-add-ingredient" id="addIngredient">+ Add Ingredient</button>
@@ -149,6 +191,6 @@
             </form>
         </div>
     </div>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
