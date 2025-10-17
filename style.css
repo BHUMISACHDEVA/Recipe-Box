@@ -3,10 +3,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --primary: #ff6b6b;
+    --primary-dark: #ee5a52;
+    --secondary: #4ecdc4;
+    --accent: #ffd93d;
+    --bg-light: #f8f9fa;
+    --bg-dark: #2d3436;
+    --text-dark: #2d3436;
+    --text-light: #636e72;
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
     color: var(--text-dark);
     min-height: 100vh;
     line-height: 1.6;
+}
+
+/* Auth Pages */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.auth-box {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+    max-width: 400px;
+    width: 100%;
+    animation: slideUp 0.5s ease;
 }
