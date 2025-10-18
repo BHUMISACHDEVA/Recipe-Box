@@ -146,3 +146,37 @@ body {
     color: var(--text-light);
     margin-top: 8px;
 }
+
+.requirement {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 3px 0;
+}
+
+.requirement.valid {
+    color: var(--secondary);
+}
+
+.requirement.invalid {
+    color: var(--text-light);
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
