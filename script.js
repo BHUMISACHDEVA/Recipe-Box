@@ -183,4 +183,54 @@ class DataManager {
             localStorage.setItem('recipes', JSON.stringify(sampleRecipes));
         }
     }
+    // User methods
+    getUsers() {
+        return JSON.parse(localStorage.getItem('users') || '[]');
+    }
+
+    saveUser(user) {
+        const users = this.getUsers();
+        users.push(user);
+        localStorage.setItem('users', JSON.stringify(users));
+    }
+
+    findUser(email, password) {
+        const users = this.getUsers();
+        return users.find(u => u.email === email && u.password === password);
+    }
+
+    // Recipe methods
+    getRecipes() {
+        return JSON.parse(localStorage.getItem('recipes') || '[]');
+    }
+
+    saveRecipes(recipes) {
+        localStorage.setItem('recipes', JSON.stringify(recipes));
+    }
+
+    addRecipe(recipe) {
+        const recipes = this.getRecipes();
+        recipes.push(recipe);
+        this.saveRecipes(recipes);
+    }
+
+    updateRecipe(id, updatedRecipe) {
+        const recipes = this.getRecipes();
+        const index = recipes.findIndex(r => r.id === id);
+        if (index !== -1) {
+            recipes[index] = { ...recipes[index], ...updatedRecipe };
+            this.saveRecipes(recipes);
+        }
+    }
+
+    deleteRecipe(id) {
+        let recipes = this.getRecipes();
+        recipes = recipes.filter(r => r.id !== id);
+        this.saveRecipes(recipes);
+    }
+
+    getRecipeById(id) {
+        const recipes = this.getRecipes();
+        return recipes.find(r => r.id === id);
+    }
 }
