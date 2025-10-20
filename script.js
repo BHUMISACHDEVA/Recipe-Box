@@ -98,6 +98,86 @@ class DataManager {
                     favorite: false,
                     userId: null,
                     createdBy: "Admin"
+                },
+                {
+                    id: Date.now() + 4,
+                    title: "Grilled Chicken Sandwich",
+                    category: "Lunch",
+                    image: "https://images.unsplash.com/photo-1553909489-cd47e0907910?w=500",
+                    calories: 450,
+                    energy: 1883,
+                    servings: 2,
+                    ingredients: [
+                        { name: "Chicken breast", quantity: "2" },
+                        { name: "Sourdough bread", quantity: "4 slices" },
+                        { name: "Lettuce", quantity: "2 leaves" },
+                        { name: "Tomato", quantity: "4 slices" },
+                        { name: "Mayonnaise", quantity: "2 tbsp" }
+                    ],
+                    steps: [
+                        "Season and grill chicken breast until cooked through.",
+                        "Toast the sourdough bread slices lightly.",
+                        "Slice the cooked chicken.",
+                        "Spread mayonnaise on the bread.",
+                        "Assemble the sandwich with chicken, lettuce, and tomato.",
+                        "Serve immediately with a side of chips or salad."
+                    ],
+                    favorite: false,
+                    userId: null,
+                    createdBy: "Admin"
+                },
+                {
+                    id: Date.now() + 5,
+                    title: "Classic Guacamole",
+                    category: "Snacks",
+                    image: "https://images.unsplash.com/photo-1599921841793-9426e2a2b057?w=500",
+                    calories: 150,
+                    energy: 628,
+                    servings: 4,
+                    ingredients: [
+                        { name: "Ripe avocados", quantity: "3" },
+                        { name: "Lime", quantity: "1" },
+                        { name: "Red onion, diced", quantity: "1/4 cup" },
+                        { name: "Cilantro, chopped", quantity: "2 tbsp" },
+                        { name: "Salt", quantity: "1/2 tsp" }
+                    ],
+                    steps: [
+                        "Halve the avocados, remove the pit, and scoop the flesh into a bowl.",
+                        "Mash the avocado with a fork to your desired consistency.",
+                        "Squeeze the lime juice over the avocado to prevent browning.",
+                        "Stir in the diced red onion and chopped cilantro.",
+                        "Season with salt and mix well.",
+                        "Serve immediately with tortilla chips."
+                    ],
+                    favorite: false,
+                    userId: null,
+                    createdBy: "Admin"
+                },
+                {
+                    id: Date.now() + 6,
+                    title: "Refreshing Mango Lassi",
+                    category: "Beverages",
+                    image: "https://images.unsplash.com/photo-1626803364121-00a54e97561d?w=500",
+                    calories: 250,
+                    energy: 1046,
+                    servings: 2,
+                    ingredients: [
+                        { name: "Ripe mango, chopped", quantity: "1 cup" },
+                        { name: "Plain yogurt", quantity: "1 cup" },
+                        { name: "Milk", quantity: "1/2 cup" },
+                        { name: "Sugar", quantity: "2 tbsp" },
+                        { name: "Cardamom powder", quantity: "a pinch" }
+                    ],
+                    steps: [
+                        "Combine the chopped mango, yogurt, milk, and sugar in a blender.",
+                        "Blend until the mixture is smooth and creamy.",
+                        "Add a pinch of cardamom powder and blend for another 5 seconds.",
+                        "Pour into glasses and serve chilled.",
+                        "Garnish with a mint leaf or a sprinkle of cardamom if desired."
+                    ],
+                    favorite: false,
+                    userId: null,
+                    createdBy: "Admin"
                 }
             ];
             localStorage.setItem('recipes', JSON.stringify(sampleRecipes));
