@@ -233,4 +233,17 @@ class DataManager {
         const recipes = this.getRecipes();
         return recipes.find(r => r.id === id);
     }
+
+    // Session methods
+    setCurrentUser(user) {
+        sessionStorage.setItem('currentUser', JSON.stringify(user));
+    }
+
+    getCurrentUser() {
+        return JSON.parse(sessionStorage.getItem('currentUser') || 'null');
+    }
+
+    logout() {
+        sessionStorage.removeItem('currentUser');
+    }
 }
